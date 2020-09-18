@@ -31,11 +31,11 @@
             return `<div>
                         <h4>${review.title}</h2>
                             <p>${review.review}</p>
-                            <i class="${review.stars > 0 ? 'fas' : 'far'} fa-star"></i>
-                            <i class="${review.stars > 1 ? 'fas' : 'far'} fa-star"></i>
-                            <i class="${review.stars > 2 ? 'fas' : 'far'} fa-star"></i>
-                            <i class="${review.stars > 3 ? 'fas' : 'far'} fa-star"></i>
-                            <i class="${review.stars > 4 ? 'fas' : 'far'} fa-star"></i>
+                            <i class="${review.stars > 0 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                            <i class="${review.stars > 1 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                            <i class="${review.stars > 2 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                            <i class="${review.stars > 3 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                            <i class="${review.stars > 4 ? 'fas fa-star checked' : 'far fa-star'}"></i>
                     </div>`
                 }).join('')}
         </div>

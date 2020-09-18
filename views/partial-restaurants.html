@@ -28,11 +28,11 @@
         <div class="column content is-half has-text-centered">
             <h2>${restaurantData.restaurant_name}</h2>
             <p>${restaurantData.category}</p>
-                <i class="${restaurantData.average_stars > 0 ? 'fas' : 'far'} fa-star"></i>
-                <i class="${restaurantData.average_stars > 1 ? 'fas' : 'far'} fa-star"></i>
-                <i class="${restaurantData.average_stars > 2 ? 'fas' : 'far'} fa-star"></i>
-                <i class="${restaurantData.average_stars > 3 ? 'fas' : 'far'} fa-star"></i>
-                <i class="${restaurantData.average_stars > 4 ? 'fas' : 'far'} fa-star"></i>
+                <i class="${restaurantData.average_stars > 0 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                <i class="${restaurantData.average_stars > 1 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                <i class="${restaurantData.average_stars > 2 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                <i class="${restaurantData.average_stars > 3 ? 'fas fa-star checked' : 'far fa-star'}"></i>
+                <i class="${restaurantData.average_stars > 4 ? 'fas fa-star checked' : 'far fa-star'}"></i>
             <p>Rating: ${restaurantData.average_stars}</p>
             <p>Takeout: ${restaurantData.takeout === true ? 'Yes' : 'No'}</p>
         </div>

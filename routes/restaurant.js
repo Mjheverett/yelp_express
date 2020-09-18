@@ -25,12 +25,8 @@ router.get("/:slug?", async (req, res) => {
 });
 
 router.post("/:slug?", async (req, res) => {
-    // console.log("req url", req.body.restaurant_id);
-    const {title} = req.body;
-    const review = req.body.review;
-    const rating = req.body.rating;
-    const restId = req.body.restaurant_id
-    await restaurantModel.addReview(title, review, rating, restId);
+    const {title, review, rating, restaurant_id} = req.body;
+    await restaurantModel.addReview(title, review, rating, restaurant_id);
     res.redirect('back');
     // res.sendStatus(200);
 })

@@ -57,7 +57,6 @@ class YelpList {
             const response = await db.result(
                 `INSERT INTO reviews(title, review, stars, reviewer_id, restaurant_id) VALUES ($1, $2, $3, $4, $5)`, [title, review, starRating, 1, restaurant_id]
             );
-            console.log('addReview response', response);
             return response;
         } catch (error) {
             console.error("ERROR:", error);
