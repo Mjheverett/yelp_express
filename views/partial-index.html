@@ -1,0 +1,38 @@
+<section class="hero is-medium is-danger">
+    <div class="hero-head">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="/" class="navbar-item">
+                        <h1 class="title">${title}</h1>
+                    </a>
+                </div>
+                <div id="navbarMenuHeroA" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="/" class="navbar-item is-active">
+                            Home
+                        </a>
+                        <a class="navbar-item">
+                            Restaurants
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<br />
+<section>
+    <div class="columns is-centered">
+        <div class="column content is-half has-text-centered">
+            <form action="/" method="POST">
+                ${restaurantData.map(restaurants => {
+                return `<p><a href="/restaurant/${restaurants.slug}">${restaurants.restaurant_name}</a></p><br />`
+                }).join('')}
+                <!-- <button type="submit">Submit Data</button> -->
+            </form>
+        </div>
+    </div>
+<section>
+

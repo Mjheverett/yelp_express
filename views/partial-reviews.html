@@ -1,0 +1,43 @@
+<br />
+<section>
+    <div class="columns is-centered">
+        <div class="column content is-half has-text-centered">
+            <h3>Add Review</h3>
+            <form action="/restaurant" method="POST">
+                <input type="hidden" name="restaurant_id" value=${restaurantData.id}>
+                <input type="text" placeholder="Title" name="title">
+                <input type="text" placeholder="Type your review..." name="review">
+                <label>Rating:
+                    <select name="rating">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                    </select>
+                </label>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<br />
+<section>
+    <div class="columns is-centered">
+        <div class="column content is-half has-text-centered">
+            <h3>Reviews</h3>
+            ${reviewData.map(review => {
+            return `<div>
+                        <h4>${review.title}</h2>
+                            <p>${review.review}</p>
+                            <i class="${review.stars > 0 ? 'fas' : 'far'} fa-star"></i>
+                            <i class="${review.stars > 1 ? 'fas' : 'far'} fa-star"></i>
+                            <i class="${review.stars > 2 ? 'fas' : 'far'} fa-star"></i>
+                            <i class="${review.stars > 3 ? 'fas' : 'far'} fa-star"></i>
+                            <i class="${review.stars > 4 ? 'fas' : 'far'} fa-star"></i>
+                    </div>`
+                }).join('')}
+        </div>
+    </div>
+</section>
