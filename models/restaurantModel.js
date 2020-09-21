@@ -1,3 +1,4 @@
+'use strict'
 const db = require('./conn');
 
 class YelpList {
@@ -15,7 +16,7 @@ class YelpList {
             );
             return response;
         } catch (error) {
-            console.error("ERROR:", error);
+            console.error("ERROR:", error.message);
             return error;
         }
     }
@@ -30,7 +31,7 @@ class YelpList {
             // console.log("getOne response", response);
             return response;
         } catch (error) {
-            console.error("ERROR:", error);
+            console.error("ERROR:", error.message);
             return error;
         }
     }
@@ -46,7 +47,7 @@ class YelpList {
             );
             return response;
         } catch (error) {
-            console.error("ERROR:", error);
+            console.error("ERROR:", error.message);
             return error;
         }
     }
@@ -59,7 +60,7 @@ class YelpList {
             );
             return response;
         } catch (error) {
-            console.error("ERROR:", error);
+            console.error("ERROR:", error.message);
             return error;
         }
     }

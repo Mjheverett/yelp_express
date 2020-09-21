@@ -12,6 +12,7 @@ const renderPage = async (req, res) => {
             title: "Yelp Express",
             restaurantData: restaurantData,
             reviewData: reviewData,
+            is_logged_in: req.session.is_logged_in,
         },
         partials: {
             restaurants: "partial-restaurants",
