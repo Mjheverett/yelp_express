@@ -25,6 +25,8 @@ server.listen(port, hostname, () => {
 
 const rootController = require("./routes/index");
 const restaurantController = require("./routes/restaurant")
+const usersController = require("./routes/users")
 
 app.use("/", rootController); // <- ROOT route
 app.use("/restaurant", restaurantController); // <- RESTAURANT route
+app.use("/users", usersController); // <- USERS route

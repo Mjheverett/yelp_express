@@ -5,8 +5,12 @@
             <h3>Add Review</h3>
             <form action="/restaurant" method="POST">
                 <input type="hidden" name="restaurant_id" value=${restaurantData.id}>
-                <input type="text" placeholder="Title" name="title">
-                <input type="text" placeholder="Type your review..." name="review">
+                <label>Title:
+                    <input type="text" placeholder="Title" name="title">
+                </label>
+                <label>My Review:
+                    <input type="text" placeholder="Type your review..." name="review">
+                </label>
                 <label>Rating:
                     <select name="rating">
                         <option value=1>1</option>
