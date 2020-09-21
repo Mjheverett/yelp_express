@@ -28,7 +28,7 @@ app.use(
         secret: "lovely day",
         resave: false,
         saveUninitialized: true,
-        is_logged_in: false // THIS IS OURS
+        is_logged_in: false, // THIS IS OURS
     })
 );
 

@@ -16,6 +16,11 @@ router.get("/login", (req, res) => {
     });
 });
 
+router.get("/logout", (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+})
+
 router.get("/signup", (req, res) => {
     res.render("template", {
         locals: {
